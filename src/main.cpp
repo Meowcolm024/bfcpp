@@ -1,28 +1,13 @@
-#include <iostream>
-#include <fstream>
-#include "bf.h"
+#include "repl.h"
 
-using namespace std;
-
-int main()
+int main(int argc, char** argv)
 {
-	int bm[MEM_SIZE];
-	memory m;
-
-	while (true) {
-		for (int i = 0; i < MEM_SIZE; i++)
-			bm[i] = 0;
-		m = {*bm, 0};
-
-		cout << "> ";
-		string input;
-		cin >> input;
-
-		if (input == "q")
-			break;
-		else
-			exec(&m, input);
-	}
-
+	if (argc == 2)
+		{
+			std::string arg = argv[1];
+			once(arg);}
+	else
+		repl();
+		
 	return 0;
 }
