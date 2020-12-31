@@ -5,7 +5,7 @@
 #include <fstream>
 #include "bf.h"
 
-void once(std::string input)
+void once(char* input)
 {
     int *bm = new int[MEM_SIZE];
     for (int i = 0; i < MEM_SIZE; i++)
@@ -17,7 +17,6 @@ void once(std::string input)
     if (myfile.is_open())
     {
         while (getline(myfile, line))
-            // ! error
             exec(&m, line);
         myfile.close();
     }
