@@ -2,11 +2,15 @@
 
 Simple `Brainfuck` interpreter in C++.
 
+- `main.cpp` is the program entrance
+- `repl.h` is the repl
+- `bf.h` is the bf core lib
+
 ## Build
 
 ``` bash
 make clean
-make run
+make
 ```
 
 ## Run
@@ -20,5 +24,5 @@ make run
 run file:
 
 ``` bash
-./main hello.bf
+make run ARGS="hello.bf"
 ```

@@ -87,5 +87,5 @@ clean:
 	@echo Cleanup complete!
 
 run: all
-	./$(OUTPUTMAIN)
+	./$(OUTPUTMAIN) $(ARGS)
 	@echo Executing 'run: all' complete!
