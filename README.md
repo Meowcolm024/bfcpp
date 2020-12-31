@@ -6,6 +6,16 @@ Simple `Brainfuck` interpreter in C++.
 - `repl.h` is the repl
 - `bf.h` is the bf core lib
 
+## ISSUES
+
+The program is still buggy (probably related to file reading) ...
+
+And I have no idea why it would happen ...
+
+- `cell.bf` is not working QAQ
+
+so ... tons of things not working orz
+
 ## Build
 
 ``` bash

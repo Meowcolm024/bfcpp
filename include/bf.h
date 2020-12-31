@@ -8,8 +8,8 @@ const int MEM_SIZE = 32;
 
 struct memory
 {
-    int mem[MEM_SIZE];    // memory size
-    int loc;              // ptr location
+    int mem[MEM_SIZE]; // memory size
+    int loc;           // ptr location
 };
 
 // display all the values in the mem and the ptr location
@@ -45,7 +45,6 @@ int step(memory *m, char inst)
     case ']':
         if ((m->mem)[m->loc])
             return 2;
-        return 3;
         break;
     case '.':
         n = (m->mem)[m->loc];
@@ -72,13 +71,11 @@ void exec(memory *m, std::string insts)
         switch (result)
         {
         case 1:
-            loops.push(pin);        // loop start
+            loops.push(pin);
             break;
         case 2:
-            pin = loops.top();      // continue loop
-            break;
-        case 3:
-            loops.pop();            // jump out of loop
+            pin = loops.top() - 1;
+            loops.pop();
             break;
         default:
             break;
