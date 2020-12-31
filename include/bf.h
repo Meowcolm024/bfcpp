@@ -72,13 +72,13 @@ void exec(memory *m, std::string insts)
         switch (result)
         {
         case 1:
-            loops.push(pin);
+            loops.push(pin);        // loop start
             break;
         case 2:
-            pin = loops.top();
+            pin = loops.top();      // continue loop
             break;
         case 3:
-            loops.pop();
+            loops.pop();            // jump out of loop
             break;
         default:
             break;
