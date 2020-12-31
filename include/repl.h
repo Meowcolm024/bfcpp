@@ -11,7 +11,7 @@ void once(char *input)
     int *bm = new int[MEM_SIZE];
     for (int i = 0; i < MEM_SIZE; i++)
         bm[i] = 0;
-    memory m = {*bm, 0};
+    memory m = {.mem = *bm, .loc = 0};
 
     // read the whole file at once
     // Solution from: https://stackoverflow.com/q/18816126/10499685
@@ -37,7 +37,7 @@ void repl()
     {
         for (int i = 0; i < MEM_SIZE; i++)
             bm[i] = 0;
-        m = {*bm, 0};
+        m = {.mem = *bm, .loc = 0};
 
         std::cout << "> ";
         std::string input;
