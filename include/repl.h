@@ -5,6 +5,7 @@
 #include <fstream>
 #include "bf.h"
 
+// run bf file
 void once(char *input)
 {
     int *bm = new int[MEM_SIZE];
@@ -12,6 +13,7 @@ void once(char *input)
         bm[i] = 0;
     memory m = {*bm, 0};
 
+    // read the whole file at once
     // Solution from: https://stackoverflow.com/q/18816126/10499685
     auto getFileContent = [](const std::string &path) -> std::string {
         std::ifstream file(path);
@@ -24,10 +26,12 @@ void once(char *input)
     exec(&m, line);
 }
 
+// the bf repl
 void repl()
 {
     int *bm = new int[MEM_SIZE];
     memory m;
+
     std::cout << "bfcpp\n";
     while (std::cin)
     {

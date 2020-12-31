@@ -8,10 +8,11 @@ const int MEM_SIZE = 32;
 
 struct memory
 {
-    int mem[MEM_SIZE];
-    int loc;
+    int mem[MEM_SIZE];    // memory size
+    int loc;              // ptr location
 };
 
+// display all the values in the mem and the ptr location
 void show_mem(memory *m)
 {
     std::cout << "MEM: ";
@@ -20,6 +21,7 @@ void show_mem(memory *m)
     std::cout << "\nPTR: " << m->loc << std::endl;
 }
 
+// perform action
 int step(memory *m, char inst)
 {
     char n;
@@ -58,6 +60,7 @@ int step(memory *m, char inst)
     return 0;
 }
 
+// interpret program
 void exec(memory *m, std::string insts)
 {
     std::stack<int> loops;

@@ -15,13 +15,13 @@ make
 
 ## Run
 
-start repl:
+Start repl:
 
 ``` bash
 make run
 ```
 
-run file:
+Run file:
 
 ``` bash
 make run ARGS="hello.bf"
